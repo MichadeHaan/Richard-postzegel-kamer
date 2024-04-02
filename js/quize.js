@@ -8,7 +8,7 @@ fetch('/json/quize.json')
         var optionsElement = document.createElement("ul");
         if (data.questions[0].options) {
             data.questions[0].options.forEach(function(option) {
-                var optionElement = document.createElement("li");
+                var optionElement = document.createElement("h2");
                 var checkboxElement = document.createElement("input");
                 checkboxElement.type = "checkbox";
                 checkboxElement.name = "option";
@@ -25,11 +25,11 @@ fetch('/json/quize.json')
                     buttonElement.textContent = "Check Answer";
                     buttonElement.addEventListener("click", function() {
                         if (checkboxElement.checked && option === data.questions[0].answer) {
-                            var resultElement = document.createElement("p");
+                            var resultElement = document.createElement("h3");
                             resultElement.textContent = "Goed!";
                             document.getElementById("quizContainer").appendChild(resultElement);
                         } else {
-                            var resultElement = document.createElement("p");
+                            var resultElement = document.createElement("h3");
                             resultElement.textContent = "Fout!";
                             document.getElementById("quizContainer").appendChild(resultElement);
                         }
@@ -68,7 +68,7 @@ fetch('/json/quize.json')
             optionsElement.innerHTML = "";
 
             data.questions[randomIndex].options.forEach(function(option) {
-                var optionElement = document.createElement("li");
+                var optionElement = document.createElement("h2");
                 var checkboxElement = document.createElement("input");
                 checkboxElement.type = "checkbox";
                 checkboxElement.name = "option";
@@ -91,11 +91,11 @@ fetch('/json/quize.json')
             buttonElement.addEventListener("click", function() {
                 var checkedOption = document.querySelector('input[name="option"]:checked');
                 if (checkedOption && checkedOption.value === data.questions[randomIndex].answer) {
-                    var resultElement = document.createElement("p");
+                    var resultElement = document.createElement("h3");
                     resultElement.textContent = "Goed!";
                     document.getElementById("quizContainer").appendChild(resultElement);
                 } else {
-                    var resultElement = document.createElement("p");
+                    var resultElement = document.createElement("h3");
                     resultElement.textContent = "Fout!";
                     document.getElementById("quizContainer").appendChild(resultElement);
                 }
