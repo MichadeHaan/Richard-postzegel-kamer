@@ -1,0 +1,384 @@
+{
+    "questions": [
+        {
+            "question": "Wat is de oudste postzegel ter wereld?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "In welk jaar werd de eerste postzegel uitgegeven?",
+            "answer": "1840",
+            "options": [
+                "1840",
+                "1851",
+                "1873",
+                "1900"
+            ]
+        },
+        {
+            "question": "Wat is de duurste postzegel ter wereld?",
+            "answer": "De Blue Mauritius",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft een omgekeerd vliegtuig?",
+            "answer": "De Inverted Jenny",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Wat is de grootste postzegel ter wereld?",
+            "answer": "De Treskilling Yellow",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft een afbeelding van een beroemd persoon?",
+            "answer": "De Elvis Presley postzegel",
+            "options": [
+                "De Marilyn Monroe postzegel",
+                "De Elvis Presley postzegel",
+                "De Albert Einstein postzegel",
+                "De Leonardo da Vinci postzegel"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft een afbeelding van een historische gebeurtenis?",
+            "answer": "De Maanlanding postzegel",
+            "options": [
+                "De Wereldoorlog II postzegel",
+                "De Maanlanding postzegel",
+                "De Val van de Berlijnse Muur postzegel",
+                "De Ontdekking van Amerika postzegel"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft een afbeelding van een dier?",
+            "answer": "De Panda postzegel",
+            "options": [
+                "De Leeuw postzegel",
+                "De Panda postzegel",
+                "De Olifant postzegel",
+                "De Tijger postzegel"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft een afbeelding van een kunstwerk?",
+            "answer": "De Mona Lisa postzegel",
+            "options": [
+                "De Sterrennacht postzegel",
+                "De Mona Lisa postzegel",
+                "De Guernica postzegel",
+                "De De Nachtwacht postzegel"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft een afbeelding van een sport?",
+            "answer": "De Olympische Spelen postzegel",
+            "options": [
+                "De Voetbal postzegel",
+                "De Olympische Spelen postzegel",
+                "De Tennis postzegel",
+                "De Golf postzegel"
+            ]
+        },
+        {
+        "question": "Welke postzegel heeft de laagste frankeerwaarde?",
+        "answer": "De Penny Black",
+        "options": [
+            "De Penny Black",
+            "De Blue Mauritius",
+            "De Inverted Jenny",
+            "De Treskilling Yellow"
+        ]
+    },
+    {
+        "question": "Wat is de kleinste postzegel ter wereld?",
+        "answer": "De Post Office Mauritius 1d Red",
+        "options": [
+            "De Penny Black",
+            "De Blue Mauritius",
+            "De Inverted Jenny",
+            "De Post Office Mauritius 1d Red"
+        ]
+    },
+    {
+        "question": "Welke postzegel heeft de hoogste verkoopwaarde?",
+        "answer": "De British Guiana 1c Magenta",
+        "options": [
+            "De Penny Black",
+            "De Blue Mauritius",
+            "De Inverted Jenny",
+            "De British Guiana 1c Magenta"
+        ]
+    },
+    {
+    "question": "Welke postzegel heeft de hoogste oplage ooit?",
+            "answer": "De Chinese Rode Militaire Postzegel",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Chinese Rode Militaire Postzegel"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de langste geldigheidsduur?",
+            "answer": "De Zwitserse Postzegel met de afbeelding van Wilhelm Tell",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Zwitserse Postzegel met de afbeelding van Wilhelm Tell"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste kleuren?",
+            "answer": "De Zwitserse Postzegel met de afbeelding van de Matterhorn",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Zwitserse Postzegel met de afbeelding van de Matterhorn"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de grootste afmetingen?",
+            "answer": "De Grote Canadese Postzegel",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Grote Canadese Postzegel"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de kleinste afmetingen?",
+            "answer": "De Micronatie Postzegel van Sealand",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Micronatie Postzegel van Sealand"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postfrisse exemplaren?",
+            "answer": "De Zwitserse Postzegel met de afbeelding van Wilhelm Tell",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Zwitserse Postzegel met de afbeelding van Wilhelm Tell"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste gestempelde exemplaren?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste variaties in ontwerp?",
+            "answer": "De Britse Machin Postzegel",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Britse Machin Postzegel"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelverzamelaars?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegeltentoonstellingen gewonnen?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelcatalogi vermeld?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelhandelaren?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste vervalsingen?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelruilbeurzen?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelverenigingen?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegeltijdschriften?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelwebsites?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelblogs?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelvideo's op YouTube?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelapps?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelalbums?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelaccessoires?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelbeurzen?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelwinkels?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        },
+        {
+            "question": "Welke postzegel heeft de meeste postzegelverzamelaarsverenigingen?",
+            "answer": "De Penny Black",
+            "options": [
+                "De Penny Black",
+                "De Blue Mauritius",
+                "De Inverted Jenny",
+                "De Treskilling Yellow"
+            ]
+        }
+    ]
+}
