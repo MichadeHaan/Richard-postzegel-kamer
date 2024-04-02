@@ -26,8 +26,7 @@ In deze kamer draait alles om postzegels, en specifiek, de prachtige collectie v
 
 ## Activiteiten
 1. **koop de postzegels die je nodig hebt**  je kan hier de postzegels kopen die je nog nodig hebt voor je colectie.
-2. **Postzegelquiz:** Test je kennis en maak kans op een exclusieve postzegelset.
-3. **postzegel game's** memorie, zoek de postzegel, snake.
+2. **postzegel game's** memorie, zoek de postzegel, snake, Postzegelquiz.
 
 ## functies
 1. **filter** kan filteren op land, nummer of prijs.
