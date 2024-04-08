@@ -75,6 +75,9 @@ fetch('/json/quize.json')
                     nextButton.disabled = false;
                     scoreElement.style.display = "none";
                     resetButton.style.display = "none";
+                    setTimeout(function() {
+                        nextButton.click();
+                    }, 200);
                 });
 
                 document.getElementById("quizContainer").appendChild(resetButton);
