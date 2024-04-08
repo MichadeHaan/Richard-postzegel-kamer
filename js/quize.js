@@ -12,35 +12,36 @@ fetch('/json/quize.json')
                 var checkboxElement = document.createElement("input");
                 checkboxElement.type = "checkbox";
                 checkboxElement.name = "option";
+                var scoreCorrect = localStorage.getItem("scoreCorrect") || "0";
+                var scoreIncorrect = localStorage.getItem("scoreIncorrect") || "0";
                 checkboxElement.value = option;
                 checkboxElement.addEventListener("change", function() {
-                    var checkboxes = document.getElementsByName("option");
-                    checkboxes.forEach(function(checkbox) {
-                        if (checkbox !== checkboxElement) {
-                            checkbox.checked = false;
-                        }
-                    });
+                             var checkboxes = document.getElementsByName("option");
+                            checkboxes.forEach(function(checkbox) {
+                                if (checkbox !== checkboxElement) {
+                                    checkbox.checked = false;
+                                }
+                            });
+                            var checkedOption = document.querySelector('input[name="option"]:checked');
+                            if (checkedOption && checkedOption.value === data.questions[0].answer) {
+                                var resultElement = document.createElement("h3");
+                                resultElement.textContent = "Goed!";
+                                scoreCorrect = parseInt(scoreCorrect) + 1;
+                                localStorage.setItem("scoreCorrect", scoreCorrect.toString());
+                
+                                document.getElementById("quizContainer").appendChild(resultElement);
+                            } else {
+                                var resultElement = document.createElement("h3");
+                                resultElement.textContent = "Fout!";      
+                                scoreIncorrect = parseInt(scoreIncorrect) + 1;
+                                localStorage.setItem("scoreIncorrect", scoreIncorrect.toString());
+                                document.getElementById("quizContainer").appendChild(resultElement);
+                            }
+                
+                            setTimeout(function() {
+                                resultElement.remove();
+                            }, 2000);
 
-                    var buttonElement = document.createElement("button");
-                    buttonElement.textContent = "Check Answer";
-                    buttonElement.addEventListener("click", function() {
-                        if (checkboxElement.checked && option === data.questions[0].answer) {
-                            var resultElement = document.createElement("h3");
-                            resultElement.textContent = "Goed!";
-                            document.getElementById("quizContainer").appendChild(resultElement);
-                        } else {
-                            var resultElement = document.createElement("h3");
-                            resultElement.textContent = "Fout!";
-                            document.getElementById("quizContainer").appendChild(resultElement);
-                        }
-
-                        setTimeout(function() {
-                            buttonElement.remove();
-                            resultElement.remove();
-                        }, 2000);
-                    });
-
-                    document.getElementById("quizContainer").appendChild(buttonElement);
                 });
                 optionElement.appendChild(checkboxElement);
                 optionElement.appendChild(document.createTextNode(option));
@@ -52,61 +53,83 @@ fetch('/json/quize.json')
         var nextButton = document.createElement("button");
         nextButton.textContent = "Next";
         nextButton.addEventListener("click", function() {
-            // Generate a random index for the next question
-            var randomIndex = Math.floor(Math.random() * data.questions.length);
+            var scoreCorrect = localStorage.getItem("scoreCorrect") || "0";
+            var scoreIncorrect = localStorage.getItem("scoreIncorrect") || "0";
+            var totalScore = localStorage.getItem("totalScore") || "0";
 
-            // Check if the question has already been asked
-            while (data.questions[randomIndex].asked) {
-                randomIndex = Math.floor(Math.random() * data.questions.length);
-            }
+            var totalScore = parseInt(scoreCorrect) + parseInt(scoreIncorrect);
+            localStorage.setItem("totalScore", totalScore.toString());
 
-            // Mark the current question as asked
-            data.questions[randomIndex].asked = true;
+            if (totalScore === 10) {
+                var scoreElement = document.createElement("h3");
+                scoreElement.textContent = "Score: Correct - " + scoreCorrect + ", Incorrect - " + scoreIncorrect;
+                document.getElementById("quizContainer").appendChild(scoreElement);
 
-            // Update the question and options
-            questionElement.textContent = data.questions[randomIndex].question;
-            optionsElement.innerHTML = "";
-
-            data.questions[randomIndex].options.forEach(function(option) {
-                var optionElement = document.createElement("h2");
-                var checkboxElement = document.createElement("input");
-                checkboxElement.type = "checkbox";
-                checkboxElement.name = "option";
-                checkboxElement.value = option;
-                checkboxElement.addEventListener("change", function() {
-                    var checkboxes = document.getElementsByName("option");
-                    checkboxes.forEach(function(checkbox) {
-                        if (checkbox !== checkboxElement) {
-                            checkbox.checked = false;
-                        }
-                    });
+                nextButton.disabled = true;
+                var resetButton = document.createElement("button");
+                resetButton.textContent = "Reset";
+                resetButton.addEventListener("click", function() {
+                    localStorage.setItem("scoreCorrect", "0");
+                    localStorage.setItem("scoreIncorrect", "0");
+                    localStorage.setItem("totalScore", "0");
+                    nextButton.disabled = false;
+                    scoreElement.style.display = "none";
+                    resetButton.style.display = "none";
                 });
-                optionElement.appendChild(checkboxElement);
-                optionElement.appendChild(document.createTextNode(option));
-                optionsElement.appendChild(optionElement);
-            });
 
-            var buttonElement = document.createElement("button");
-            buttonElement.textContent = "Check Answer";
-            buttonElement.addEventListener("click", function() {
-                var checkedOption = document.querySelector('input[name="option"]:checked');
-                if (checkedOption && checkedOption.value === data.questions[randomIndex].answer) {
-                    var resultElement = document.createElement("h3");
-                    resultElement.textContent = "Goed!";
-                    document.getElementById("quizContainer").appendChild(resultElement);
-                } else {
-                    var resultElement = document.createElement("h3");
-                    resultElement.textContent = "Fout!";
-                    document.getElementById("quizContainer").appendChild(resultElement);
+                document.getElementById("quizContainer").appendChild(resetButton);
+            } else {
+                var randomIndex = Math.floor(Math.random() * data.questions.length);
+
+                while (data.questions[randomIndex].asked) {
+                    randomIndex = Math.floor(Math.random() * data.questions.length);
                 }
 
-                setTimeout(function() {
-                    buttonElement.remove();
-                    resultElement.remove();
-                }, 2000);
-            });
+                data.questions[randomIndex].asked = true;
 
-            document.getElementById("quizContainer").appendChild(buttonElement);
+                questionElement.textContent = data.questions[randomIndex].question;
+                optionsElement.innerHTML = "";
+
+                data.questions[randomIndex].options.forEach(function(option) {
+                    var optionElement = document.createElement("h2");
+                    var checkboxElement = document.createElement("input");
+                    checkboxElement.type = "checkbox";
+                    checkboxElement.name = "option";
+                    checkboxElement.value = option;
+
+                    checkboxElement.addEventListener("change", function() {
+                        var checkedOption = document.querySelector('input[name="option"]:checked');
+                        if (checkedOption && checkedOption.value === data.questions[randomIndex].answer) {
+                            var resultElement = document.createElement("h3");
+                            resultElement.textContent = "Goed!";
+                            scoreCorrect = parseInt(scoreCorrect) + 1;
+                            localStorage.setItem("scoreCorrect", scoreCorrect.toString());
+
+                            document.getElementById("quizContainer").appendChild(resultElement);
+                        } else {
+                            var resultElement = document.createElement("h3");
+                            resultElement.textContent = "Fout!";
+                            scoreIncorrect = parseInt(scoreIncorrect) + 1;
+                            localStorage.setItem("scoreIncorrect", scoreIncorrect.toString());
+                            document.getElementById("quizContainer").appendChild(resultElement);
+                        }
+
+                        setTimeout(function() {
+                            resultElement.remove();
+                        }, 2000);
+                        var checkboxes = document.getElementsByName("option");
+                        checkboxes.forEach(function(checkbox) {
+                            if (checkbox !== checkboxElement) {
+                                checkbox.checked = false;
+                            }
+                        });
+
+                    });
+                    optionElement.appendChild(checkboxElement);
+                    optionElement.appendChild(document.createTextNode(option));
+                    optionsElement.appendChild(optionElement);
+                });
+            }
         });
 
         document.getElementById("quizContainer").appendChild(nextButton);
