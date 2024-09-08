@@ -3,7 +3,6 @@ body {
     font-family: Arial, sans-serif;
     background-image: linear-gradient(to bottom, #ff0000, #ffffff, #287bef);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -23,8 +22,6 @@ h1 {
     font-family: 'Pacifico', cursive;
 }
 
-input[type="text"],
-input[type="password"],
 input[type="email"] {
     width: 93%;
     padding: 10px;
