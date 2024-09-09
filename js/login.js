@@ -16,6 +16,7 @@ loginBtn.addEventListener('click', () => {
 
 if (localStorage.getItem('loggedIn') === 'true') {
   console.log('Gebruiker is ingelogd');
+  window.location.href = '/index.html';
 } else {
   console.log('Gebruiker is niet ingelogd');
 }
