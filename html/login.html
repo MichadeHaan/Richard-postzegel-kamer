@@ -4,15 +4,16 @@
 <head>
     <title>Inloggen - Richard's Postzegel Kamer</title>
     <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js" defer></script>
 </head>
 
 <body>
     <div class="container">
         <h1>Inloggen</h1>
         <form>
-            <input type="text" placeholder="Gebruikersnaam" required>
-            <input type="password" placeholder="Wachtwoord" required>
-            <input type="submit" value="Inloggen">
+            <input type="text" placeholder="Gebruikersnaam" id="username" required>
+            <input type="password" placeholder="Wachtwoord" id="password" required>
+            <input type="submit" value="Inloggen" id="login-btn">
         </form>
         <a href="./vergeten.html">Wachtwoord vergeten</a> | <a href="./register.html">Registreren</a>
     </div>

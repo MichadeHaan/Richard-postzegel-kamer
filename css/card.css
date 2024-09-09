@@ -1,92 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
-
-.cover {
-  display: inline-block;
-  height: 200px;
-	width: 320px;
-	margin: 15px;
-	border-radius: 8px;
+/*===== VARIABLES CSS =====*/
+:root {
+    --dark-color-lighten: #f2f5ff;
+    --red-card: #a62121;
+    --blue-card: #4bb7e6;
+    --btn: #141414;
+    --btn-hover: #3a3a3a;
+    --text: #fbf7f7;
 }
 
-@media screen and (max-width: 700px) {
-	.container {
-		width : 100%;
-		position: relative;
-		transform: translate(0%, 0%);
-		top: 0;
-		left: 0;
-	}
-	.cover {
-		display: block;
-		height: 200px;
-		width: 320px;
-		margin: 15px auto;
-	}
+/*===== RESET =====*/
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.atvImg {
-	border-radius: 8px;
-	transform-style: preserve-3d;
-	-webkit-tap-highlight-color: rgba(#000,0);
+button {
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    color: var(--text);
+    cursor: pointer;
 }
 
-.atvImg img {
-	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(14,21,47,0.25);
+a {
+    text-decoration: none;
 }
 
-.atvImg-container {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	border-radius: 8px;
-	transition: all 0.2s ease-out;
+img {
+    max-width: 100%;
+    height: 100%;
+    user-select: none;
 }
 
-.atvImg-container.over .atvImg-shadow {
-	box-shadow: 0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4);
+/*===== CARD =====*/
+.container {
+    height: 100%;
+    width: 1200px;
+    /* Breedte aangepast naar 1200px */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* Toegevoegd om kaarten op meerdere rijen te plaatsen */
 }
 
-.atvImg-layers {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	border-radius: 8px;
-	overflow: hidden;
-	transform-style: preserve-3d;
+.card {
+    padding: 1rem;
+    width: 23%;
+    /* Breedte aangepast naar 18% */
+    height: 450px;
+    box-shadow: -1px 15px 30px -12px rgb(32, 32, 32);
+    border-radius: 0.9rem;
+    background-color: var(--red-card);
+    color: var(--text);
+    cursor: pointer;
+    margin: 1rem;
+    /* Toegevoegd om spacing tussen kaarten te creëren */
 }
 
-.atvImg-rendered-layer {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0%; 
-	left: 0%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-color: transparent;
-	background-size: cover;
-	transition: all 0.1s ease-out;
-	overflow: hidden;
-	border-radius: 8px;
+.card-blue {
+    background: var(--blue-card);
 }
 
-.atvImg-shadow {
-	position: absolute;
-	top: 5%; 
-	left: 5%;
-	width: 90%;
-	height: 90%;
-	transition: all 0.2s ease-out;
-	box-shadow: 0 8px 30px rgba(14,21,47,0.6);
+.product-image {
+    height: 230px;
+    width: 100%;
+    transform: translate(0, -1.5rem);
+    transition: transform 500ms ease-in-out;
+    filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
 }
 
-.atvImg-shine {
-	position: absolute;
-	top: 0; 
-	left: 0; 
-	right: 0; 
-	bottom: 0;
-	border-radius: 8px;
-	background: linear-gradient(135deg, rgba(255,255,255,.25) 0%,rgba(255,255,255,0) 60%);
+.product-info {
+    text-align: center;
+}
+
+.card:hover .product-image {
+    transform: translate(-1.5rem, -7rem) rotate(-20deg);
+}
+
+.product-info h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.product-info p {
+    margin: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0.8rem;
+}
+
+.buy-btn {
+    background-color: var(--btn);
+    padding: 0.6rem 3.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 300ms ease;
+}
+
+.buy-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.fav {
+    box-sizing: border-box;
+    background: #fff;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid#000;
+}
+
+.svg {
+    height: 25px;
+    width: 25px;
+    fill: #fff;
+    transition: all 500ms ease;
+}
+
+.fav:hover .svg {
+    fill: #000;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 2rem 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .card {
+        width: 100%;
+        /* Breedte aangepast naar 100% */
+        margin: 1rem 0;
+        /* Margin aangepast voor mobiele versie */
+    }
+
+    .product-image {
+        display: flex;
+        justify-content: center;
+        height: 150px;
+        /* Hoogte aangepast voor mobiele versie */
+    }
+
+    .product-info {
+        padding: 1rem;
+        /* Padding toegevoegd voor mobiele versie */
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: row;
+        /* Flex-direction aangepast voor mobiele versie */
+        align-items: center;
+    }
+
+    .buy-btn {
+        padding: 0.6rem 2rem;
+        /* Padding aangepast voor mobiele versie */
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+}
+
+.copy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.media {
+    height: 50px;
+    width: 50px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
