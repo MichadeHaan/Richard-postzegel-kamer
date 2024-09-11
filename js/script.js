@@ -7,5 +7,5 @@ if (localStorage.getItem('loggedIn') === 'true') {
         localStorage.setItem('loggedIn', 'false');
     });
 } else {
-    loginLink.textContent = 'Login';
+    loginLink.textContent = 'Log in';
 }
