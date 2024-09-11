@@ -2,13 +2,25 @@ const loginBtn = document.getElementById('login-btn');
 const usernameInput = document.getElementById('username');
 const passwordInput = document.getElementById('password');
 
+// Set default values for username and password in localStorage
+if (!localStorage.getItem('username')) {
+  localStorage.setItem('username', 'admin');
+}
+if (!localStorage.getItem('password')) {
+  localStorage.setItem('password', 'password');
+}
+
 loginBtn.addEventListener('click', () => {
   const username = usernameInput.value;
   const password = passwordInput.value;
 
-  if (username === 'admin' && password === 'password') {
+  const storedUsername = localStorage.getItem('username');
+  const storedPassword = localStorage.getItem('password');
+
+  if (username === storedUsername && password === storedPassword) {
     localStorage.setItem('loggedIn', 'true');
     console.log('Ingelogd!');
+    window.location.href = '/index.html';
   } else {
     console.log('Ongeldige gebruikersnaam of wachtwoord');
   }
