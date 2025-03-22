@@ -20,7 +20,7 @@ loginBtn.addEventListener('click', () => {
   if (username === storedUsername && password === storedPassword) {
     localStorage.setItem('loggedIn', 'true');
     console.log('Ingelogd!');
-    window.location.href = '/index.html';
+    window.location.href = '../html/shop.html';
   } else {
     console.log('Ongeldige gebruikersnaam of wachtwoord');
   }
@@ -28,7 +28,7 @@ loginBtn.addEventListener('click', () => {
 
 if (localStorage.getItem('loggedIn') === 'true') {
   console.log('Gebruiker is ingelogd');
-  window.location.href = '/index.html';
+  window.location.href = '../html/shop.html';
 } else {
   console.log('Gebruiker is niet ingelogd');
 }
