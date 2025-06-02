@@ -140,6 +140,8 @@ img {
     fill: #000;
 }
 
+
+/*werkt op desktop*/
 @media screen and (max-width: 1200px) {
     .container {
         padding: 2rem 0;
